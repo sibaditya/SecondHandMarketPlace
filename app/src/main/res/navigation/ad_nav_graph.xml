@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/user_list_nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.kijiji.view.SplashScreenFragment"
+        android:label="SplashScreenFragment" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_adListingFragment"
+            app:destination="@id/adListingFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/adListingFragment"
+        android:name="com.example.kijiji.view.AdListingFragment"
+        android:label="AdListingFragment" >
+        <action
+            android:id="@+id/action_adListingFragment_to_addDetailFragment"
+            app:destination="@id/addDetailFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+
+        <argument android:name="addResponse"
+            app:argType="com.example.kijiji.model.AdList"/>
+    </fragment>
+    <fragment
+        android:id="@+id/addDetailFragment"
+        android:name="com.example.kijiji.view.AddDetailFragment"
+        android:label="AddDetailFragment" >
+
+        <argument android:name="adId"
+            android:defaultValue="None"/>
+    </fragment>
+
+</navigation>
