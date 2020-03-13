@@ -48,5 +48,9 @@ The ViewModel and the repository have been unit tested.
 
 5)Retrofit (For network calling)
 
+6)MockWebServer(For mocking webserver call)
+
+7)JUnit(For unit testing)
+
 
 P.S: Screenshots can be found in the screenshots folder.
