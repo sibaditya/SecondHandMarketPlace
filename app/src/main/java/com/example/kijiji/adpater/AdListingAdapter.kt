@@ -3,7 +3,6 @@ package com.example.kijiji.adpater
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ProgressBar
 import androidx.recyclerview.widget.RecyclerView
 import com.airbnb.lottie.LottieAnimationView
 import com.example.kijiji.R
@@ -12,10 +11,13 @@ import com.example.kijiji.model.Ads
 import com.example.kijiji.util.Utils
 
 
-class AdListingAdapter(): RecyclerView.Adapter<RecyclerView.ViewHolder>()  {
+class AdListingAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>()  {
 
-    private val VIEW_TYPE_ITEM = 0
-    private val VIEW_TYPE_LOADING = 1
+    companion object {
+        private const val VIEW_TYPE_ITEM = 0
+        private const val VIEW_TYPE_LOADING = 1
+    }
+
     private val adList = ArrayList<Ads?>()
     private lateinit var adItemClickListener: AdItemClickListener
     private lateinit var viewHolder :RecyclerView.ViewHolder
@@ -24,7 +26,7 @@ class AdListingAdapter(): RecyclerView.Adapter<RecyclerView.ViewHolder>()  {
         fun onAddItemClicked(ads: Ads?)
     }
 
-    fun setAdClickLsitener(listener: AdItemClickListener) {
+    fun setAdClickListener(listener: AdItemClickListener) {
         adItemClickListener = listener
     }
 
@@ -56,7 +58,7 @@ class AdListingAdapter(): RecyclerView.Adapter<RecyclerView.ViewHolder>()  {
             val adItemLayoutBinding: AdItemLayoutBinding = AdItemLayoutBinding.inflate(layoutInflater, parent, false)
             viewHolder = AdListingViewHolder(adItemLayoutBinding)
         } else if (viewType == VIEW_TYPE_LOADING) {
-            val view: View = LayoutInflater.from(parent.getContext())
+            val view: View = LayoutInflater.from(parent.context)
                 .inflate(R.layout.ad_list_item_loading, parent, false)
             viewHolder = LoadingViewHolder(view)
         }
@@ -89,9 +91,9 @@ class AdListingAdapter(): RecyclerView.Adapter<RecyclerView.ViewHolder>()  {
         fun bind(item: Ads?, adItemClickListener: AdItemClickListener) {
             binding.ads = item
             binding.date = Utils().getFormatedDate(item?.post_date)
-            itemView.setOnClickListener(View.OnClickListener {
+            itemView.setOnClickListener {
                 adItemClickListener.onAddItemClicked(item)
-            })
+            }
             binding.executePendingBindings()
         }
     }

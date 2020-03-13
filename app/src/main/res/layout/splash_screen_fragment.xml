@@ -8,7 +8,7 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="400dp"
+        android:layout_height="@dimen/splash_screen_logo_height"
         android:background="@drawable/kijiji_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

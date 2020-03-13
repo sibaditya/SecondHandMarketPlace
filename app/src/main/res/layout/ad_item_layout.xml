@@ -22,12 +22,12 @@
 <androidx.cardview.widget.CardView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="8dp"
-    app:cardCornerRadius="8dp"
-    android:elevation="4dp">
+    android:layout_marginLeft="@dimen/dimen_16dp"
+    android:layout_marginRight="@dimen/dimen_16dp"
+    android:layout_marginTop="@dimen/dimen_8dp"
+    android:layout_marginBottom="@dimen/dimen_8dp"
+    app:cardCornerRadius="@dimen/dimen_8dp"
+    android:elevation="@dimen/dimen_4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/ad_item"
@@ -36,14 +36,14 @@
 
     <ImageView
         android:id="@+id/ad_image"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="@dimen/ad_list_image_width"
+        android:layout_height="@dimen/ad_list_image_height"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:layout_marginStart="@dimen/dimen_8dp"
+        android:layout_marginBottom="@dimen/dimen_8dp"
         android:visibility="@{util.isTextNullOrEmpty(ads.component8()) ? View.GONE : View.VISIBLE}"
         app:imageResource="@{ads.component8()}"
         android:background="@drawable/image_border"
@@ -53,15 +53,15 @@
             android:id="@+id/ad_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
             android:maxLines="3"
             android:ellipsize="marquee"
             app:layout_constrainedWidth="true"
             android:text="@{ads.title}"
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="@dimen/test_size_16sp"
             android:textStyle="bold"
             android:visibility="@{util.isTextNullOrEmpty(ads.title) ? View.GONE : View.VISIBLE}"
             app:autoSizeTextType="uniform"
@@ -79,8 +79,8 @@
             android:maxLines="2"
             android:ellipsize="end"
             tools:text="$ 20"
-            android:textColor="#000000"
-            android:textSize="20sp"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size_20sp"
             android:textStyle="bold"
             android:text="@{ads.component7().component1() + ads.component7().component2()}"
             android:layout_marginStart="16dp"
@@ -95,13 +95,13 @@
             android:maxLines="1"
             android:ellipsize="end"
             tools:text="My Posted Date"
-            android:textSize="14sp"
+            android:textSize="@dimen/text_size_14sp"
             android:text="@{String.format(@string/posted_date(date))}"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="@dimen/dimen_16dp"
             app:layout_constraintLeft_toRightOf="@+id/ad_image"
             app:layout_constraintBottom_toBottomOf="parent"
             android:visibility="@{util.isTextNullOrEmpty(ads.component5()) ? View.GONE : View.VISIBLE}"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="@dimen/dimen_8dp"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

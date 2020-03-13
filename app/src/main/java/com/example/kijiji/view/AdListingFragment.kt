@@ -57,7 +57,7 @@ class AdListingFragment: AdParentFragment(), AdListingAdapter.AdItemClickListene
             adList = adListBundle!!.ads
             nextPageUrl = adListBundle?.next_page_url
             adListAdapter = AdListingAdapter()
-            adListAdapter.setAdClickLsitener(this)
+            adListAdapter.setAdClickListener(this)
             adListAdapter.setAdList(adList)
         }
         adErrorMessage = arguments?.getString(SplashScreenFragment.AD_ERROR_RESPONSE)
