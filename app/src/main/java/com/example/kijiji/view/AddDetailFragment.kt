@@ -124,7 +124,12 @@ class AddDetailFragment : AdParentFragment() {
         val uri: String =
             java.lang.String.format(Locale.ENGLISH, "geo:%f,%f", adDetail.location.latitude, adDetail.location.longitude)
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(uri))
-        startActivity(intent)
+
+        if (isPackageAvailable(intent)) {
+            startActivity(intent)
+        } else {
+            showToast(getString(R.string.application_not_available))
+        }
     }
 
     fun launchEmail(adDetail: AdDetail) {
@@ -132,6 +137,19 @@ class AddDetailFragment : AdParentFragment() {
             "mailto",adDetail.email, null))
         intent.type = "plain/text"
         intent.data = Uri.parse("mailto:")
-        startActivity(Intent.createChooser(intent, "Send email..."))
+        if(isPackageAvailable(intent)) {
+            startActivity(Intent.createChooser(intent, "Send email..."))
+        } else {
+            showToast(getString(R.string.application_not_available))
+        }
+
+    }
+
+    private fun isPackageAvailable(intent: Intent) : Boolean {
+        val packageManager = activity?.packageManager
+        if (packageManager?.let { intent.resolveActivity(it) } != null) {
+            return true
+        }
+        return false
     }
 }
