@@ -33,7 +33,7 @@ When the user clicks on the address and if they have any map application install
 
 
 # Testing efforts
-The ViewModel and the repository have been unit tested.
+The ViewModel and the Utils have been unit tested.
 
 
 # Other Libraries used on the project
