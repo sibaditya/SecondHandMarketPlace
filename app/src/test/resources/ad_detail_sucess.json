@@ -1,0 +1,29 @@
+{
+  "id": "3",
+  "user_id": "3",
+  "title": "Samsung Galaxy S10+ 128GB",
+  "category_id": "29659001",
+  "post_date": "2019-09-05T21:28:28Z",
+  "location": {
+    "address": "203-223 Brunswick Ave, Toronto, ON M5S 2M4, Canada",
+    "latitude": 43.663363,
+    "longitude": -79.406609
+  },
+  "price": {
+    "currency": "$",
+    "amount": 849.99
+  },
+  "thumbnail_url": "https://images-na.ssl-images-amazon.com/images/I/61YVqHdFRxL._AC_SL1322_.jpg",
+  "description": "Hybrid/Dual-SIM (Nano-SIM), Network Compatibility : 2G bands: GSM 850 / 900 / 1800 / 1900, 3G bands: HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100, 4G LTE bands: 1(2100), 2(1900), 3(1800), 4(1700/2100), 5(850), 7(2600), 8(900), 12(700), 13(700), 17(700), 18(800), 19(800), 20(800), 25(1900), 26(850), 28(700), 32(1500), 38(2600), 39(1900), 40(2300), 41(2500), 66(1700/2100)\n6.4 inches, Dynamic AMOLED capacitive touchscreen, 16M colors, 1440 x 3040 pixels, Corning Gorilla Glass 6, 128GB Storage, 8GB RAM, Up to 512GB microSD Card slot (uses SIM 2 slot)\nAndroid 9.0 (Pie), Exynos 9820 Octa (8 nm), Octa-core (2x2.73 GHz Mongoose M4 & 2x2.31 GHz Cortex-A75 & 4x1.95 GHz Cortex-A55), Mali-G76 MP12\nDust and Water-resistant: Water-resistant and dustproof based on IP68 Rating, which tests submersion up to 1.5 meter for up to 30 minutes. Not shockproof.\nInternational model phone, Does not have US warranty, will work with Most GSM SIM cards in U.S. and world Including AT&T, T-Mobile, MetroPCS, Etc. Will NOT work with CDMA Carriers Such as Verizon, Sprint, Boost.",
+  "email": "s10@kijijitest.com",
+  "image_urls": [
+    "https://images-na.ssl-images-amazon.com/images/I/61YVqHdFRxL._AC_SL1322_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/I/51t8W0dnQiL._SL1280_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/I/51kxyhxBo9L._SL1280_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/I/51oN%2BmLVUjL._SL1280_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/I/41ZcUV3fpfL._SL1280_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/I/41IsOkstmCL._SL1280_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/I/510F0aJWOiL._SL1280_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/I/51U89ClAmdL._SL1280_.jpg"
+  ]
+}

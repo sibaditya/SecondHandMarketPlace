@@ -19,7 +19,6 @@ import com.example.kijiji.network.ApiEmptyResponse
 import com.example.kijiji.network.ApiErrorResponse
 import com.example.kijiji.network.ApiSuccessResponse
 import com.example.kijiji.viewmodel.SplashScreenFragmentViewModel
-import com.example.kijiji.viewmodel.livedata.ResourceStatus
 
 class SplashScreenFragment: AdParentFragment() {
 

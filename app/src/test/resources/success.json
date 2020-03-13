@@ -1,0 +1,90 @@
+{
+  "ads": [
+    {
+      "id": "6",
+      "user_id": "3",
+      "title": "French Door Refrigerator with Ice Maker – Fingerprint Resistant Stainless Steel",
+      "category_id": "107",
+      "post_date": "2019-10-08T02:28:28Z",
+      "location": {
+        "address": "74-72 Glen Rd, Toronto, ON M4W 2V6, Canada",
+        "latitude": 43.676138,
+        "longitude": -79.375113
+      },
+      "price": {
+        "currency": "$",
+        "amount": 1299.99
+      },
+      "thumbnail_url": "https://c.shld.net/rpx/i/s/i/spin/10109385/prod_18910213112?hei=500&wid=500&sharpen=1"
+    },
+    {
+      "id": "7",
+      "user_id": "2",
+      "title": "FRIHETEN Sleeper sofa, Skiftebo dark gray",
+      "category_id": "235",
+      "post_date": "2019-12-12T04:10:10Z",
+      "location": {
+        "address": "12-2 Lumley Ave, East York, ON M4G 2X4, Canada",
+        "latitude": 43.694623,
+        "longitude": -79.375788
+      },
+      "price": {
+        "currency": "$",
+        "amount": 499.99
+      },
+      "thumbnail_url": "https://www.ikea.com/us/en/images/products/friheten-three-seat-sofa-bed__0525504_PE644868_S5.JPG"
+    },
+    {
+      "id": "8",
+      "user_id": "1",
+      "title": "Audemars Piguet Royal Oak Gold, Diamond And Ruby Bracelet Watch Circa 1995",
+      "category_id": "133",
+      "post_date": "2019-12-26T02:43:43Z",
+      "location": {
+        "address": "53-77 Oriole Rd, Toronto, ON M4V 2E9, Canada",
+        "latitude": 43.689753,
+        "longitude": -79.400895
+      },
+      "price": {
+        "currency": "$",
+        "amount": 31110.0
+      },
+      "thumbnail_url": "https://cdn.sothebyshome.com/media/catalog/product/cache/1/image/736x460/9df78eab33525d08d6e5fb8d27136e95/b/g/bg8v2_1.jpg"
+    },
+    {
+      "id": "9",
+      "user_id": "4",
+      "title": "JOOLA Midsize - Regulation Height Table Tennis Table Great for Small Spaces and Apartments",
+      "category_id": "111",
+      "post_date": "2019-12-01T21:31:31Z",
+      "location": {
+        "address": "29-1 Strathearn Rd, York, ON M6C 1R2, Canada",
+        "latitude": 43.692328,
+        "longitude": -79.422895
+      },
+      "price": {
+        "currency": "$",
+        "amount": 135.99
+      },
+      "thumbnail_url": "https://images-na.ssl-images-amazon.com/images/I/71q5owACbDL._AC_SL1500_.jpg"
+    },
+    {
+      "id": "10",
+      "user_id": "5",
+      "title": "Bose - SoundSport® Free wireless headphones - Black",
+      "category_id": "767",
+      "post_date": "2019-09-28T15:19:19Z",
+      "location": {
+        "address": "10-128 Belgravia Ave, York, ON M6E 2M5, Canada",
+        "latitude": 43.699566,
+        "longitude": -79.440785
+      },
+      "price": {
+        "currency": "$",
+        "amount": 199.99
+      },
+      "thumbnail_url": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5876/5876110_sd.jpg;maxHeight=640;maxWidth=550"
+    }
+  ],
+  "next_page_url": "https://kijiji-mobile-interview.surge.sh/ads/2"
+}
