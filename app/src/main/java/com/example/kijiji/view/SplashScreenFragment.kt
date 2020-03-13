@@ -15,15 +15,18 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.kijiji.R
 import com.example.kijiji.databinding.SplashScreenFragmentBinding
+import com.example.kijiji.network.ApiEmptyResponse
 import com.example.kijiji.network.ApiErrorResponse
 import com.example.kijiji.network.ApiSuccessResponse
 import com.example.kijiji.viewmodel.SplashScreenFragmentViewModel
+import com.example.kijiji.viewmodel.livedata.ResourceStatus
 
-class SplashScreenFragment: Fragment() {
+class SplashScreenFragment: AdParentFragment() {
 
     companion object {
         val TAG = SplashScreenFragment::class.java.canonicalName
         const val AD_REPONSE_KEY = "addResponse"
+        const val AD_ERROR_RESPONSE = "addErrorResponse"
     }
 
     lateinit var navController: NavController
@@ -50,16 +53,24 @@ class SplashScreenFragment: Fragment() {
                 is ApiSuccessResponse -> {
                     Log.d(TAG, it.body.toString())
                     val bundle = bundleOf(AD_REPONSE_KEY to it.body)
-                    navController.navigate(R.id.action_splashScreenFragment_to_adListingFragment, bundle)
+                    navigateToAdListingFragment(bundle)
                 }
                 is ApiErrorResponse -> {
-                    Log.d(TAG, it.errorMessage)
+                    showToast(it.errorMessage)
+                    val bundle = bundleOf(AD_ERROR_RESPONSE to it.errorMessage)
+                    navigateToAdListingFragment(bundle)
                 }
-                is ApiErrorResponse -> {
-                    Log.d(TAG, it.errorMessage)
+                is ApiEmptyResponse -> {
+                    showToast(it.toString())
+                    val bundle = bundleOf(AD_ERROR_RESPONSE to it.toString())
+                    navigateToAdListingFragment(bundle)
                 }
             }
         })
+    }
+
+    private fun navigateToAdListingFragment(bundle: Bundle) {
+        navController.navigate(R.id.action_splashScreenFragment_to_adListingFragment, bundle)
     }
 
     override fun onResume() {

@@ -9,9 +9,7 @@ import com.example.kijiji.network.RetrofitClient
 import com.example.kijiji.util.UrlUtils
 
 class AdListingViewModel: ViewModel() {
-
     fun getNextAdResponse(url: String?): LiveData<ApiResponse<AdList>> {
         return RetrofitClient().getRetrofit(UrlUtils.BASE_URL).create(IAdService::class.java).getNextAdListing(url)
     }
-
 }

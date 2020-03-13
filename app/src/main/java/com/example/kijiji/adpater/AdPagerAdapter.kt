@@ -19,7 +19,7 @@ class AdPagerAdapter: PagerAdapter() {
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val view: View =
-            LayoutInflater.from(container.context).inflate(R.layout.ad_item, null)
+            LayoutInflater.from(container.context).inflate(R.layout.ad_image_items, null)
         val imageView = view.findViewById<ImageView>(R.id.image)
         Utils.setImageResource(imageView, adImageList[position])
         container.addView(view)

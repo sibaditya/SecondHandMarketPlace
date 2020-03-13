@@ -1,3 +1,7 @@
 <resources>
   <string name="app_name">Kijiji</string>
+  <string name="posted_date">"Posted On: %s"</string>
+  <string name="info">Info</string>
+  <string name="please_wait">Please wait…</string>
+  <string name="error_message">"Something went wrong: %s \nPlease try after sometime"</string>
 </resources>
